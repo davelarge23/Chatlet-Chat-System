@@ -17,11 +17,12 @@ const io = socketIo(server, {
 
 // Middleware
 app.use(cors());
-app.use(express.static(path.join(__dirname, 'frontend/build'))); // Serve static files from React build
+// Serve static files from React build
+app.use(express.static(path.join(__dirname, '../frontend/build')));
 
 // Serve the React app for all other routes
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'frontend/build', 'index.html'));
+  res.sendFile(path.join(__dirname, '../frontend/build', 'index.html'));
 });
 
 
