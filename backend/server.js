@@ -16,6 +16,12 @@ const io = socketIo(server, {
 // Middleware
 app.use(cors());
 
+// Root Route
+app.get('/', (req, res) => {
+  res.send('Welcome to Chatlet Chat System!');
+});
+
+
 // Waiting List for User Matching
 let waitingUsers = {};
 
