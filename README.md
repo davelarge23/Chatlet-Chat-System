@@ -7,9 +7,10 @@ Frontend:
 
 Middleware:
 - CORS
+- Express
 
 Backend:
-- Node.js with Express
+- Node.js 
 - Socket.io
 
 Database: N/A
