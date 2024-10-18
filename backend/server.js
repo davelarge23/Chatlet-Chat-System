@@ -15,10 +15,11 @@ const io = socketIo(server, {
 
 // Middleware
 app.use(cors());
+app.use(express.static(path.join(__dirname, 'frontend/build'))); // Serve static files from React build
 
-// Root Route
-app.get('/', (req, res) => {
-  res.send('Welcome to Chatlet Chat System!');
+// Serve the React app for all other routes
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'frontend/build', 'index.html'));
 });
 
 
