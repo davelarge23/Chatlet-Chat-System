@@ -19,7 +19,7 @@ import {
 } from '@chakra-ui/react';
 import { ChatIcon, CloseIcon } from '@chakra-ui/icons';
 
-const socket = io('http://localhost:5000');
+const socket = io(process.env.REACT_APP_API_URL);
 
 function App() {
   const [messages, setMessages] = useState([]);
