@@ -269,7 +269,7 @@ const About = ({ onClose }) => {
         </Box>
       </HStack>
 
-      <Text textAlign={"center"}>Developed by <Text fontWeight={"bold"}>Cristhan Dave Espiritu</Text></Text>
+      
       <Text>©2024 Chatlet, All Rights Reserved</Text>
 
       </VStack>
